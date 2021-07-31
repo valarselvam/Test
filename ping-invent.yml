@@ -1,0 +1,7 @@
+---
+ - name: "Get ping response"
+   hosts: all
+   tasks:
+   - action: ping
+     register: hello
+   - debug: msg="{hello.stdout}"
